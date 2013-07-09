@@ -1,10 +1,21 @@
 LeadApp::Application.routes.draw do
-  resources :quotes
+  resources :quotes do
+    member do
+      get :vendors
+    end
+  end
+
+  resources :relationships, only: [:create, :destroy]
+
+  devise_for :vendors, path_names: {sign_up: "signup", sign_in: "login", sign_out: "logout"}
+  resources :vendors, only: [:index, :show] do
+    member do
+      get :quotes
+    end
+  end
 
 
-  devise_for :vendors
-
-  devise_for :users
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

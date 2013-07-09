@@ -1,45 +1,46 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Quote type:</b>
+  <strong>Quote type:</strong>
   <%= @quote.quote_type %>
 </p>
 
 <p>
-  <b>Wedding style:</b>
+  <strong>Wedding style:</strong>
   <%= @quote.wedding_style %>
 </p>
 
 <p>
-  <b>Budget:</b>
+  <strong>Budget:</strong>
   <%= @quote.budget %>
 </p>
 
 <p>
-  <b>Comments:</b>
+  <strong>Comments:</strong>
   <%= @quote.comments %>
 </p>
 
 <p>
-  <b>Event date:</b>
+  <strong>Event date:</strong>
   <%= @quote.event_date %>
 </p>
 
 <p>
-  <b>Event time:</b>
+  <strong>Event time:</strong>
   <%= @quote.event_time %>
 </p>
 
 <p>
-  <b>Zip code:</b>
+  <strong>Zip code:</strong>
   <%= @quote.zip_code %>
 </p>
 
 <p>
-  <b>Solicitation type:</b>
+  <strong>Solicitation type:</strong>
   <%= @quote.solicitation_type %>
 </p>
 
+<%= render 'bid' if vendor_signed_in? %>
 
 <%= link_to 'Edit', edit_quote_path(@quote) %> |
 <%= link_to 'Back', quotes_path %>

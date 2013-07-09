@@ -1,0 +1,4 @@
+<%= form_for(current_vendor.relationships.build(quote_id: @quote.id)) do |f| %>
+	<div><%= f.hidden_field :quote_id %></div>
+	<%= f.submit "Submit Bid", class: "tiny button" %>
+<% end %>
