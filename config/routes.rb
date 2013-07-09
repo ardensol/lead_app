@@ -1,4 +1,11 @@
 LeadApp::Application.routes.draw do
+  resources :quotes
+
+
+  devise_for :vendors
+
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

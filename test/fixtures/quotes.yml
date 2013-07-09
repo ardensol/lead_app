@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  quote_type: MyString
+  wedding_style: MyString
+  budget: MyString
+  comments: MyString
+  event_date: MyString
+  event_time: 2013-07-09 12:36:50
+  zip_code: MyString
+  solicitation_type: MyString
+
+two:
+  quote_type: MyString
+  wedding_style: MyString
+  budget: MyString
+  comments: MyString
+  event_date: MyString
+  event_time: 2013-07-09 12:36:50
+  zip_code: MyString
+  solicitation_type: MyString

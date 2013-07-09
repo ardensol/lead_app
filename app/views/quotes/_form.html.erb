@@ -1,0 +1,49 @@
+<%= form_for(@quote) do |f| %>
+  <% if @quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+      <ul>
+      <% @quote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :quote_type %><br />
+    <%= f.text_field :quote_type %>
+  </div>
+  <div class="field">
+    <%= f.label :wedding_style %><br />
+    <%= f.text_field :wedding_style %>
+  </div>
+  <div class="field">
+    <%= f.label :budget %><br />
+    <%= f.text_field :budget %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_field :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :event_date %><br />
+    <%= f.text_field :event_date %>
+  </div>
+  <div class="field">
+    <%= f.label :event_time %><br />
+    <%= f.time_select :event_time %>
+  </div>
+  <div class="field">
+    <%= f.label :zip_code %><br />
+    <%= f.text_field :zip_code %>
+  </div>
+  <div class="field">
+    <%= f.label :solicitation_type %><br />
+    <%= f.text_field :solicitation_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
