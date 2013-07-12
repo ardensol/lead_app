@@ -7,7 +7,7 @@ class Vendor < ActiveRecord::Base
     has_many :relationships, foreign_key: "vendor_id", dependent: :destroy 
     has_many :quotes, through: :relationships, source: "quote_id"
 
-
+  acts_as_messageable
 
 	def bidding?(quote)
     	relationships.find_by_quote_id(quote.id)

@@ -1,5 +1,9 @@
 LeadApp::Application.routes.draw do  
 
+  mount Messaging::Engine => "/messaging"
+
+  devise_for :messaging_users
+
   get "static_pages/home"
 
   get "static_pages/help"
